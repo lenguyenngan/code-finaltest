@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tabs button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.tabs button:hover {
+  background-color: #e0e0e0;
+}
+
+/* add task */
+.add-task {
+  margin-bottom: 20px;
+  display: flex;
+  width: 100%;
+}
+
+.add-task input {
+  padding: 12px;
+  flex-grow: 1;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s;
+}
+
+.add-task input:focus {
+  border-color: #007bff;
+}
+
+.add-task button {
+  padding: 12px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-task button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Danh sách tasks */
+.task-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: box-shadow 0.3s;
+  width: 290px;
+}
+
+.task-list li:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-list li span {
+  padding: 5px;
+  flex-grow: 1;
+  text-align: left;
+  margin-right: 10px;
+}
+
+.task-list li span.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-list li button {
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.task-list li button:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Nút xóa tất cả */
+.delete-all {
+  padding: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  display: block;
+  margin: 20px auto;
+}
+
+.delete-all:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
