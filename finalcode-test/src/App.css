@@ -8,8 +8,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   font-family: "Arial", sans-serif;
-  background-color: #f9f9f9;
+  background-color: #f1f5f9;
 }
 
 .app {
@@ -18,11 +19,11 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 600px;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  max-width: 500px;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 }
 
 /* Tabs */
@@ -30,28 +31,39 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  position: relative;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .tabs button {
   padding: 10px 20px;
-  margin: 0 5px;
+  margin: 0 8px;
   border: none;
-  background-color: #f1f1f1;
+  background-color: transparent;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  font-size: 16px;
+  outline: none;
+  color: #777;
 }
 
 .tabs button.active {
-  background-color: #007bff;
-  color: white;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 3px solid #007bff; /* Đường kẻ xanh dày dưới tab đang active */
 }
 
 .tabs button:hover {
-  background-color: #e0e0e0;
+  color: #007bff;
 }
 
-/* add task */
+.tabs button:focus {
+  outline: none; /* Xóa viền khung khi focus */
+}
+
+/* Add task */
 .add-task {
   margin-bottom: 20px;
   display: flex;
@@ -62,13 +74,14 @@ body {
   padding: 12px;
   flex-grow: 1;
   margin-right: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 5px;
   transition: border 0.3s;
 }
 
 .add-task input:focus {
   border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
 .add-task button {
@@ -98,16 +111,15 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 10px 15px;
   border: 1px solid #eee;
   border-radius: 5px;
   background-color: #fff;
   transition: box-shadow 0.3s;
-  width: 290px;
 }
 
 .task-list li:hover {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .task-list li span {
